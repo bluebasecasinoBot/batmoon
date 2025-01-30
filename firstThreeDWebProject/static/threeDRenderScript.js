@@ -65,6 +65,11 @@ export function MainRenderInit()
     floorMesh();
     batmanFlat();
 
+    for(let i = 0; i < 200; i++)
+    {
+        addStar();
+    }
+
     //render 3d text
     const fontLoader = new FontLoader();
     fontLoader.load('./assets/font/Comicker_Regular.json' , font =>{
@@ -93,6 +98,17 @@ export function MainRenderInit()
     //render 3d text
 
     animate();
+}
+
+const addStar = () =>{
+    const geometry = new THREE.SphereGeometry(.25 , 24 , 24);
+    const material = new THREE.MeshStandardMaterial({color:0xffffff});
+    const star = new THREE.Mesh(geometry , material);
+
+    const [x , y , z] = Array(3).fill().map(() => THREE.MathUtils.randFloatSpread(100));
+
+    star.position.set(x , y , z);
+    threeAccess.scene.add(star);
 }
 
 function animate()
