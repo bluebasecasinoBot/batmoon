@@ -1,4 +1,4 @@
-import { __c, __g, __m, __p, __SYD, __u, __v } from "../sydneyDom_v2.js"
+import { __c, __g, __m, __p, __SYD, __u, __v } from "./sydneyDom_v2.js"
 import {MainRenderInit} from "./threeDRenderScript.js"
 import { getVideo1 } from "./billBoard.js"
 
