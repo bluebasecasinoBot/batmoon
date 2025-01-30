@@ -48,7 +48,7 @@ __SYD.tg = () =>{
         "a",
         {
             style:`position:fixed;top:125px;right:15px;background-image:url(./assets/image/tg.png);background-size:cover;height:50px;width:50px;cursor:pointer;`,
-            href:"#",
+            href:"https://t.me/batmoon_sol",
             title:"telegram channel"
         }
     )
