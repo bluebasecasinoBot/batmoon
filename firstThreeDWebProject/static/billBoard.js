@@ -4,19 +4,27 @@ import * as THREE from "./three.module.min.js"
 
 const video1 = document.createElement('video');
 video1.src = './assets/video/vid1.mp4';  // Replace with your video file
-video1.loop = true;
+// video1.loop = true;
 video1.muted = true; // Autoplay requires muted videos
 video1.playsInline = true;
-video1.play();  // Start playing
+// video1.play();  // Start playing
 
 const video2 = document.createElement('video');
 video2.src = './assets/video/vid2.mp4';  // Replace with your video file
-video2.loop = true;
+// video2.loop = true;
 video2.playsInline = true;
 video2.muted = true; // Autoplay requires muted videos
 video2.play();  // Start playing
 
-export const getVideo1 = () => video1;
+video2.addEventListener('ended', () => {
+    video1.play();
+})
+
+video1.addEventListener('ended', () => {
+    video2.play();
+})
+
+export const getVideo1 = () => [video1 , video2];
 
 export const billboard = () =>{
     const threeAccess = getThreeAccess();
