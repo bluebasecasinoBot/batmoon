@@ -1,4 +1,4 @@
-import { __v } from "../sydneyDom_v2.js";
+import { __v } from "./sydneyDom_v2.js";
 import * as THREE from "./three.module.min.js"
 import {OrbitControls} from "./OrbitControls.js"
 import { FontLoader } from "./FontLoader.js";
