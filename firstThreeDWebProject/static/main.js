@@ -50,13 +50,15 @@ __SYD.audioSwitch = () =>{
                     const state = __g("audioSwitch");
                     state.url = state.url === "play" ? "pause" : "play";
                     const video = getVideo1();
-                    if(video.muted)
+                    if(video[0].muted)
                     {
-                        video.muted = false;
+                        video[0].muted = false;
+                        video[1].muted = false;
                     }
                     else
                     {
-                        video.muted = true;
+                        video[0].muted = true;
+                        video[1].muted = true;
                     }
                     __u("audioSwitch" , {type:"a" , value:state})
                 }
